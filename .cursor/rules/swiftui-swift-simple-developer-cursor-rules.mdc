@@ -1,0 +1,65 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# SwiftUI/Swift Professional Development Guidelines
+
+## Project Architecture
+
+- Follow MVVM (Model-View-ViewModel) architecture where appropriate
+- Separate UI components (Views) from business logic and data transformation (ViewModels)
+- Use [ContentView.swift](mdc:IncomeVsExpenses/ContentView.swift) as the main container view
+- Keep the [IncomeVsExpensesApp.swift](mdc:IncomeVsExpenses/IncomeVsExpensesApp.swift) file minimal and focused on app initialization
+
+## File Organization
+
+- Group related components in dedicated files
+- Extract reusable views into their own files
+- Place models in a separate Models directory
+- Organize ViewModels in a dedicated ViewModels directory
+- Use extensions to separate concerns within large files
+
+## Code Structure
+
+- Use `// MARK: - Section Name` comments to organize code sections
+- Place computed properties after stored properties
+- Group related methods and properties together
+- Follow a consistent order: Properties → Lifecycle → View Builders → Methods
+- Keep view bodies concise; extract complex views into private helper methods
+
+## SwiftUI Best Practices
+
+- Use ViewBuilder methods for complex view hierarchies
+- Leverage SwiftUI's declarative syntax for UI state management
+- Prefer `@State`, `@Binding`, `@StateObject`, `@ObservedObject`, and `@EnvironmentObject` appropriately
+- Embrace Swift's type system for safety and expressiveness
+- Create reusable modifiers using `ViewModifier` protocol
+
+## Swift Style Guidelines
+
+- Follow Apple's [Swift API Design Guidelines](mdc:https:/swift.org/documentation/api-design-guidelines)
+- Use meaningful variable and function names
+- Leverage Swift's strong type system and avoid force unwrapping (`!`)
+- Use `guard` statements for early returns
+- Prefer value types (structs) over reference types (classes) when appropriate
+- Use access control modifiers (`private`, `fileprivate`, `internal`, etc.) to limit scope
+
+## Performance Considerations
+
+- Avoid expensive operations in view bodies
+- Use `@State` for simple view-local state, `@StateObject` for complex view-owned objects
+- Be mindful of SwiftUI's view identity and diffing algorithm
+- Cache expensive calculations
+
+## Data Persistence
+
+- Use appropriate persistence mechanisms (UserDefaults, CoreData, etc.) based on data complexity
+- Separate persistence logic from view code
+- Handle errors gracefully in data loading/saving operations
+
+## Testing
+
+- Write unit tests for business logic and data transformations
+- Create UI tests for critical user flows
+- Use dependency injection to facilitate testing
