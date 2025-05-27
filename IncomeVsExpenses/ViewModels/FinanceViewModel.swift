@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 class FinanceViewModel: ObservableObject {
     // Published properties
@@ -80,6 +81,7 @@ class FinanceViewModel: ObservableObject {
         
         resetNewItemFields()
         saveItems()
+        updateWidget()
     }
     
     func deleteItems(at offsets: IndexSet) {
@@ -87,6 +89,7 @@ class FinanceViewModel: ObservableObject {
             financeItems.remove(atOffsets: offsets)
         }
         saveItems()
+        updateWidget()
     }
     
     func resetNewItemFields() {
@@ -118,8 +121,17 @@ class FinanceViewModel: ObservableObject {
                 ]
                 saveItems()
             }
+            updateWidget()
         } catch {
             print("Failed to load finance items: \(error.localizedDescription)")
+        }
+    }
+    
+    private func updateWidget() {
+        if let userDefaults = UserDefaults(suiteName: "group.com.yourdomain.IncomeVsExpenses") {
+            userDefaults.set(totalIncome, forKey: "widget.totalIncome")
+            userDefaults.set(totalExpenses, forKey: "widget.totalExpenses")
+            WidgetCenter.shared.reloadAllTimelines()
         }
     }
 } 

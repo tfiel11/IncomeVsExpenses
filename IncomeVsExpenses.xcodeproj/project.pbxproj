@@ -6,7 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D1140C192DE5E0DC00DF45D3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1140C182DE5E0DC00DF45D3 /* WidgetKit.framework */; };
+		D1140C1B2DE5E0DC00DF45D3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1140C1A2DE5E0DC00DF45D3 /* SwiftUI.framework */; };
+		D1140C2A2DE5E0DD00DF45D3 /* BalanceWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D1140C162DE5E0DC00DF45D3 /* BalanceWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		D1140C282DE5E0DD00DF45D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1D2B6262DDF8C3F0020B22C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1140C152DE5E0DC00DF45D3;
+			remoteInfo = BalanceWidgetExtension;
+		};
 		D1D2B63C2DDF8C400020B22C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D1D2B6262DDF8C3F0020B22C /* Project object */;
@@ -23,13 +36,49 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D1140C2F2DE5E0DD00DF45D3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D1140C2A2DE5E0DD00DF45D3 /* BalanceWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D1140C162DE5E0DC00DF45D3 /* BalanceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BalanceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1140C182DE5E0DC00DF45D3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D1140C1A2DE5E0DC00DF45D3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D1140C332DE5E26100DF45D3 /* BalanceWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BalanceWidgetExtension.entitlements; sourceTree = "<group>"; };
 		D1D2B62E2DDF8C3F0020B22C /* IncomeVsExpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncomeVsExpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D2B63B2DDF8C400020B22C /* IncomeVsExpensesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncomeVsExpensesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D2B6452DDF8C400020B22C /* IncomeVsExpensesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IncomeVsExpensesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D1140C2B2DE5E0DD00DF45D3 /* Exceptions for "BalanceWidget" folder in "BalanceWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D1140C152DE5E0DC00DF45D3 /* BalanceWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D1140C1C2DE5E0DC00DF45D3 /* BalanceWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D1140C2B2DE5E0DD00DF45D3 /* Exceptions for "BalanceWidget" folder in "BalanceWidgetExtension" target */,
+			);
+			path = BalanceWidget;
+			sourceTree = "<group>";
+		};
 		D1D2B6302DDF8C3F0020B22C /* IncomeVsExpenses */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = IncomeVsExpenses;
@@ -48,6 +97,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D1140C132DE5E0DC00DF45D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1140C1B2DE5E0DC00DF45D3 /* SwiftUI.framework in Frameworks */,
+				D1140C192DE5E0DC00DF45D3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1D2B62B2DDF8C3F0020B22C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +130,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1140C172DE5E0DC00DF45D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1140C182DE5E0DC00DF45D3 /* WidgetKit.framework */,
+				D1140C1A2DE5E0DC00DF45D3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1D2B6252DDF8C3F0020B22C = {
 			isa = PBXGroup;
 			children = (
+				D1140C332DE5E26100DF45D3 /* BalanceWidgetExtension.entitlements */,
 				D1D2B6302DDF8C3F0020B22C /* IncomeVsExpenses */,
 				D1D2B63E2DDF8C400020B22C /* IncomeVsExpensesTests */,
 				D1D2B6482DDF8C400020B22C /* IncomeVsExpensesUITests */,
+				D1140C1C2DE5E0DC00DF45D3 /* BalanceWidget */,
+				D1140C172DE5E0DC00DF45D3 /* Frameworks */,
 				D1D2B62F2DDF8C3F0020B22C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +158,7 @@
 				D1D2B62E2DDF8C3F0020B22C /* IncomeVsExpenses.app */,
 				D1D2B63B2DDF8C400020B22C /* IncomeVsExpensesTests.xctest */,
 				D1D2B6452DDF8C400020B22C /* IncomeVsExpensesUITests.xctest */,
+				D1140C162DE5E0DC00DF45D3 /* BalanceWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +166,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D1140C152DE5E0DC00DF45D3 /* BalanceWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1140C2C2DE5E0DD00DF45D3 /* Build configuration list for PBXNativeTarget "BalanceWidgetExtension" */;
+			buildPhases = (
+				D1140C122DE5E0DC00DF45D3 /* Sources */,
+				D1140C132DE5E0DC00DF45D3 /* Frameworks */,
+				D1140C142DE5E0DC00DF45D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D1140C1C2DE5E0DC00DF45D3 /* BalanceWidget */,
+			);
+			name = BalanceWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = BalanceWidgetExtension;
+			productReference = D1140C162DE5E0DC00DF45D3 /* BalanceWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D1D2B62D2DDF8C3F0020B22C /* IncomeVsExpenses */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1D2B64F2DDF8C400020B22C /* Build configuration list for PBXNativeTarget "IncomeVsExpenses" */;
@@ -102,10 +195,12 @@
 				D1D2B62A2DDF8C3F0020B22C /* Sources */,
 				D1D2B62B2DDF8C3F0020B22C /* Frameworks */,
 				D1D2B62C2DDF8C3F0020B22C /* Resources */,
+				D1140C2F2DE5E0DD00DF45D3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D1140C292DE5E0DD00DF45D3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D1D2B6302DDF8C3F0020B22C /* IncomeVsExpenses */,
@@ -173,6 +268,9 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					D1140C152DE5E0DC00DF45D3 = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					D1D2B62D2DDF8C3F0020B22C = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -203,11 +301,19 @@
 				D1D2B62D2DDF8C3F0020B22C /* IncomeVsExpenses */,
 				D1D2B63A2DDF8C400020B22C /* IncomeVsExpensesTests */,
 				D1D2B6442DDF8C400020B22C /* IncomeVsExpensesUITests */,
+				D1140C152DE5E0DC00DF45D3 /* BalanceWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D1140C142DE5E0DC00DF45D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1D2B62C2DDF8C3F0020B22C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +338,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D1140C122DE5E0DC00DF45D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1D2B62A2DDF8C3F0020B22C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +369,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D1140C292DE5E0DD00DF45D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1140C152DE5E0DC00DF45D3 /* BalanceWidgetExtension */;
+			targetProxy = D1140C282DE5E0DD00DF45D3 /* PBXContainerItemProxy */;
+		};
 		D1D2B63D2DDF8C400020B22C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D1D2B62D2DDF8C3F0020B22C /* IncomeVsExpenses */;
@@ -269,6 +387,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D1140C2D2DE5E0DD00DF45D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BalanceWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BalanceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BalanceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IncomeVsExpenses.BalanceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1140C2E2DE5E0DD00DF45D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = BalanceWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WM7SKJ8A72;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BalanceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BalanceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfiel11.IncomeVsExpenses.BalanceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D1D2B64D2DDF8C400020B22C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +569,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IncomeVsExpenses/IncomeVsExpenses.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WM7SKJ8A72;
@@ -423,6 +598,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IncomeVsExpenses/IncomeVsExpenses.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WM7SKJ8A72;
@@ -521,6 +697,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D1140C2C2DE5E0DD00DF45D3 /* Build configuration list for PBXNativeTarget "BalanceWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1140C2D2DE5E0DD00DF45D3 /* Debug */,
+				D1140C2E2DE5E0DD00DF45D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D1D2B6292DDF8C3F0020B22C /* Build configuration list for PBXProject "IncomeVsExpenses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
